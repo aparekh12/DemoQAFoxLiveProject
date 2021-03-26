@@ -1,4 +1,4 @@
-Feature: Login functionality schnarios
+Feature: Login functionality scenarios
 
 @Login @One
 Scenario: Verify weather the user is able to login with valid credential

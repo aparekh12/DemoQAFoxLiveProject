@@ -7,26 +7,31 @@ import cucumber.api.junit.Cucumber;
 
 @RunWith(Cucumber.class)
 /*@CucumberOptions(//features={"classpath:FeatureFiles/Register.feature"},
-                 features={"classpath:FeatureFiles/Login.feature"},
+               //  features={"classpath:FeatureFiles/Login.feature"},
+		          features={"classpath:FeatureFiles/Search.feature"},
                  glue= {"classpath:com.tutorialsninja.automation.stepdef"},
                  plugin= {"html:target/cucumber_html_report"},
               //   tags= {"@Register","@Four"}
               // 		 tags= {"@Register"} run on all register scenarios
               // 	 tags= {"@Login","@Four"}
-               		 tags= {"@Login"}
-                 
+              // 	 tags= {"@Login"}
+              //       tags ={"@Search","@Two"}   
+                 tags ={"@Search"}  //both run one after otheer
+		          
+		          
 		)*/
 
-
+//all feature files runs ne after other
 @CucumberOptions(//features={"classpath:FeatureFiles/Register.feature"},
-        features={"classpath:FeatureFiles/Register.feature", "classpath:FeatureFiles/Login.feature"},
+        features={"classpath:FeatureFiles/Register.feature", "classpath:FeatureFiles/Login.feature",
+        		"classpath:FeatureFiles/Search.feature"},
         glue= {"classpath:com.tutorialsninja.automation.stepdef"},
         plugin= {"html:target/cucumber_html_report"}
      //   tags= {"@Register","@Four"}
      // 		 tags= {"@Register"} run on all register scenarios
      // 	 tags= {"@Login","@Four"}
      // 		 tags= {"@Login"}
-        
+       
 )
 
 
