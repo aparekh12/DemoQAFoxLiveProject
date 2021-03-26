@@ -6,12 +6,11 @@ import org.openqa.selenium.support.PageFactory;
 
 import com.tutorialsninja.automation.base.Base;
 
-public class HeadersSection {
-	
+public class MyAccountPage {
 	
 	//Constructor to initialize all webelements created
 	
-	public HeadersSection() {
+	public MyAccountPage() {
 		
 		//Constructor to initialize all webelements create
 		PageFactory.initElements(Base.driver, this);
@@ -19,15 +18,11 @@ public class HeadersSection {
 	}
 	
 	
-	@FindBy(xpath ="//span[text()='My Account']")
-	public static WebElement myAccountLink;
-	
-	@FindBy(linkText="Register")
-	public static WebElement registerLink;
+	@FindBy(linkText="Register for an affiliate account")
+	public static WebElement registerAffiliateAccount;
 	
 	
-	@FindBy(linkText="Login")
-	public static WebElement loginLink;	
+	
 	
 	
 

@@ -6,12 +6,30 @@ import cucumber.api.CucumberOptions;
 import cucumber.api.junit.Cucumber;
 
 @RunWith(Cucumber.class)
-@CucumberOptions(features={"classpath:FeatureFiles/Register.feature"},
+/*@CucumberOptions(//features={"classpath:FeatureFiles/Register.feature"},
+                 features={"classpath:FeatureFiles/Login.feature"},
                  glue= {"classpath:com.tutorialsninja.automation.stepdef"},
                  plugin= {"html:target/cucumber_html_report"},
               //   tags= {"@Register","@Four"}
-                		 tags= {"@Register"}
-		)
+              // 		 tags= {"@Register"} run on all register scenarios
+              // 	 tags= {"@Login","@Four"}
+               		 tags= {"@Login"}
+                 
+		)*/
+
+
+@CucumberOptions(//features={"classpath:FeatureFiles/Register.feature"},
+        features={"classpath:FeatureFiles/Register.feature", "classpath:FeatureFiles/Login.feature"},
+        glue= {"classpath:com.tutorialsninja.automation.stepdef"},
+        plugin= {"html:target/cucumber_html_report"}
+     //   tags= {"@Register","@Four"}
+     // 		 tags= {"@Register"} run on all register scenarios
+     // 	 tags= {"@Login","@Four"}
+     // 		 tags= {"@Login"}
+        
+)
+
+
 public class Runner {
 
 }
