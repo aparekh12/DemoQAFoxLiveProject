@@ -57,6 +57,14 @@ public class Browser {
 	public static void maximize() {
 		Base.driver.manage().window().maximize();
 	}
+	
+	//Launch appLICATION method define in framework in below method
+	
+	public static void openApplicationURL() {
+		
+		//Launch the app from framework
+				Base.driver.get(Base.reader.getUrl());
+	}
 
 	public static byte[] takeScreenshot() {
 		try {
